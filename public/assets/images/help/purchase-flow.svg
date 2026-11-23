@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">云服务器购买与开通流程</title>
+  <desc id="desc">选择产品、配置规格、下单支付、自动开通四个步骤。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7faff"/>
+      <stop offset="1" stop-color="#eaf2ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#477aeb"/>
+      <stop offset="1" stop-color="#6e9bff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#23436a" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="560" rx="24" fill="url(#bg)"/>
+  <circle cx="1080" cy="72" r="130" fill="#477aeb" opacity=".06"/>
+  <circle cx="1080" cy="72" r="92" fill="none" stroke="#477aeb" stroke-opacity=".16"/>
+  <text x="64" y="62" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" letter-spacing="2.2" fill="#477aeb">PURCHASE &amp; ACTIVATION</text>
+  <text x="64" y="112" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="32" font-weight="700" fill="#17345b">从选购到开通，只需四步</text>
+  <text x="64" y="145" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#7085a3">选好配置并完成支付后，系统会自动下发开通任务。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="194" width="252" height="244" rx="16" fill="#ffffff" stroke="#e1eaf7"/>
+    <rect x="88" y="218" width="42" height="42" rx="12" fill="#edf3ff"/>
+    <text x="109" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#477aeb">01</text>
+    <text x="88" y="296" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#17345b">选择产品</text>
+    <text x="88" y="326" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">进入产品选购页，按地区、</text>
+    <text x="88" y="348" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">用途和预算挑选合适的云服务器。</text>
+    <rect x="88" y="384" width="146" height="26" rx="13" fill="#f1f6ff"/>
+    <text x="161" y="402" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#477aeb">CPU / 内存 / 带宽</text>
+  </g>
+
+  <path d="M326 316h44" stroke="#b9cdf0" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="m364 309 8 7-8 7" fill="none" stroke="#7da6f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="384" y="194" width="252" height="244" rx="16" fill="#ffffff" stroke="#e1eaf7"/>
+    <rect x="408" y="218" width="42" height="42" rx="12" fill="#edf3ff"/>
+    <text x="429" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#477aeb">02</text>
+    <text x="408" y="296" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#17345b">配置规格</text>
+    <text x="408" y="326" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">选择操作系统、计费周期、</text>
+    <text x="408" y="348" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">数据盘与端口等可选配置。</text>
+    <rect x="408" y="384" width="146" height="26" rx="13" fill="#f1f6ff"/>
+    <text x="481" y="402" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#477aeb">系统 / 周期 / 端口</text>
+  </g>
+
+  <path d="M646 316h44" stroke="#b9cdf0" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="m684 309 8 7-8 7" fill="none" stroke="#7da6f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="704" y="194" width="252" height="244" rx="16" fill="#ffffff" stroke="#e1eaf7"/>
+    <rect x="728" y="218" width="42" height="42" rx="12" fill="#edf3ff"/>
+    <text x="749" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#477aeb">03</text>
+    <text x="728" y="296" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#17345b">下单支付</text>
+    <text x="728" y="326" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">核对订单金额与配置，选择</text>
+    <text x="728" y="348" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">余额或在线支付完成付款。</text>
+    <rect x="728" y="384" width="146" height="26" rx="13" fill="#f1f6ff"/>
+    <text x="801" y="402" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#477aeb">支付成功 · 生成订单</text>
+  </g>
+
+  <path d="M966 316h44" stroke="#b9cdf0" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="m1004 309 8 7-8 7" fill="none" stroke="#7da6f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1024" y="194" width="112" height="244" rx="16" fill="#173f75"/>
+    <rect x="1048" y="218" width="42" height="42" rx="12" fill="#2d588f"/>
+    <text x="1069" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#cfe0ff">04</text>
+    <text x="1048" y="296" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#ffffff">开通</text>
+    <text x="1048" y="326" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#b9d1ec">自动下发</text>
+    <text x="1048" y="348" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#b9d1ec">到节点</text>
+    <circle cx="1080" cy="400" r="13" fill="#4ade80"/>
+    <path d="m1074 400 4 4 8-9" fill="none" stroke="#0d3b25" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <rect x="64" y="478" width="1072" height="42" rx="10" fill="#ffffff" opacity=".68"/>
+  <text x="88" y="504" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#647d9e">提示：支付完成后通常 1–5 分钟内完成开通；如遇到库存或人工审核，进度会在工单中同步。</text>
+</svg>

@@ -1,0 +1,6 @@
+.azure-workspace--compact{gap:9px;padding:10px 9px}
+.azure-workspace--compact .azure-workspace-icon{width:28px;height:28px;flex:0 0 28px;border:0;border-radius:8px;background:var(--dt-b-ffffff,#fff)}
+.azure-workspace--compact .azure-workspace-icon svg{display:block}
+.azure-workspace--compact b{font-size:13px;line-height:1.4}
+.azure-workspace--compact small{font-size:10px;line-height:1.4;margin-top:2px;letter-spacing:.1px;white-space:nowrap}
+.azure-admin .azure-workspace--admin .azure-workspace-icon{color:var(--ao-blue,#315df4);background:var(--ao-soft,#f5f8fd)}

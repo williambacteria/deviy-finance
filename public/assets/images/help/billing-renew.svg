@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">续费、账单与发票</title>
+  <desc id="desc">到期提醒、续费支付、账单与发票三个环节。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fbff"/><stop offset="1" stop-color="#eef4ff"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#23436a" flood-opacity=".08"/></filter>
+  </defs>
+  <rect width="1200" height="520" rx="24" fill="url(#bg)"/>
+  <text x="64" y="58" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" letter-spacing="2.2" fill="#477aeb">BILLING &amp; RENEWAL</text>
+  <text x="64" y="106" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="31" font-weight="700" fill="#17345b">续费、账单与发票，一条线看清</text>
+  <text x="64" y="137" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="14" fill="#7085a3">提前关注到期时间，续费后服务时长自动顺延，账单与发票在控制台统一查看。</text>
+
+  <g filter="url(#s)">
+    <rect x="64" y="180" width="330" height="238" rx="15" fill="#fff" stroke="#e1eaf7"/>
+    <rect x="88" y="204" width="42" height="42" rx="12" fill="#edf3ff"/><text x="109" y="232" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#477aeb">01</text>
+    <text x="88" y="280" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#17345b">到期提醒</text>
+    <text x="88" y="310" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#6e829f">服务列表展示到期时间；到期前会</text>
+    <text x="88" y="331" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#6e829f">生成续费提示。建议提前 3–7 天处理。</text>
+    <rect x="88" y="360" width="272" height="34" rx="8" fill="#f5f9ff"/>
+    <text x="100" y="382" font-family="Consolas, monospace" font-size="11" fill="#477aeb">expires_at → 2026-12-31</text>
+  </g>
+
+  <path d="M394 299h58" stroke="#b9cdf0" stroke-width="2" stroke-dasharray="5 5"/><path d="m446 292 8 7-8 7" fill="none" stroke="#7da6f2" stroke-width="2" stroke-linecap="round"/>
+  <g filter="url(#s)">
+    <rect x="466" y="180" width="330" height="238" rx="15" fill="#173f75"/>
+    <rect x="490" y="204" width="42" height="42" rx="12" fill="#2d588f"/><text x="511" y="232" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#cfe0ff">02</text>
+    <text x="490" y="280" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#fff">续费支付</text>
+    <text x="490" y="310" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#b9d1ec">选择续费周期，确认价格后使用</text>
+    <text x="490" y="331" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#b9d1ec">余额或在线支付完成续费。</text>
+    <rect x="490" y="360" width="282" height="34" rx="8" fill="#204f89"/>
+    <text x="502" y="382" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#dbeaff">月付 / 季付 / 半年付 / 年付</text>
+  </g>
+
+  <path d="M796 299h58" stroke="#b9cdf0" stroke-width="2" stroke-dasharray="5 5"/><path d="m848 292 8 7-8 7" fill="none" stroke="#7da6f2" stroke-width="2" stroke-linecap="round"/>
+  <g filter="url(#s)">
+    <rect x="868" y="180" width="268" height="238" rx="15" fill="#fff" stroke="#e1eaf7"/>
+    <rect x="892" y="204" width="42" height="42" rx="12" fill="#edf3ff"/><text x="913" y="232" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#477aeb">03</text>
+    <text x="892" y="280" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#17345b">账单与发票</text>
+    <text x="892" y="310" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#6e829f">订单、余额流水和发票申请</text>
+    <text x="892" y="331" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#6e829f">都在「账单与发票」中。</text>
+    <rect x="892" y="360" width="220" height="34" rx="8" fill="#f5f9ff"/>
+    <text x="904" y="382" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#477aeb">电子发票 · PDF</text>
+  </g>
+
+  <rect x="64" y="448" width="1072" height="36" rx="8" fill="#fff" opacity=".7"/>
+  <text x="88" y="471" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#647d9e">提示：自动续费需要账户余额充足；关闭自动续费不等于服务立即到期，请仍关注到期时间。</text>
+</svg>

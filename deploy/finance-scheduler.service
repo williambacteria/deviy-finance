@@ -1,0 +1,15 @@
+[Unit]
+Description=Deviy Finance Scheduler
+After=network.target
+
+[Service]
+Type=simple
+User=www
+Group=www
+WorkingDirectory=/www/wwwroot/demo.deviy.cn
+ExecStart=/www/server/php/83/bin/php artisan schedule:work
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

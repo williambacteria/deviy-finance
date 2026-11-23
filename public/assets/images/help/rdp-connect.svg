@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Windows 远程桌面连接</title>
+  <desc id="desc">远程桌面连接窗口，填写公网地址、账号和密码。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7faff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#1d3a63" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="560" rx="24" fill="url(#bg)"/>
+  <text x="64" y="62" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" letter-spacing="2.2" fill="#477aeb">REMOTE DESKTOP</text>
+  <text x="64" y="112" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="32" font-weight="700" fill="#17345b">使用 Windows 远程桌面连接实例</text>
+  <text x="64" y="145" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#7085a3">在本地 Windows 搜索“远程桌面连接”，输入服务详情页提供的地址与账号。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="188" width="600" height="310" rx="14" fill="#ffffff" stroke="#dbe5f2"/>
+    <rect x="64" y="188" width="600" height="44" rx="14" fill="#f3f7fd"/>
+    <rect x="64" y="216" width="600" height="16" fill="#f3f7fd"/>
+    <circle cx="88" cy="210" r="5" fill="#f0a6a6"/>
+    <circle cx="106" cy="210" r="5" fill="#eccb83"/>
+    <circle cx="124" cy="210" r="5" fill="#8fd1a8"/>
+    <text x="350" y="215" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#6b7f9b">远程桌面连接</text>
+
+    <text x="94" y="270" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="#405a7c">计算机</text>
+    <rect x="94" y="282" width="392" height="38" rx="6" fill="#ffffff" stroke="#c9d8ea"/>
+    <text x="108" y="306" font-family="Consolas, monospace" font-size="13" fill="#315df4">p7.deviy.cn:41252</text>
+    <rect x="500" y="282" width="132" height="38" rx="6" fill="#edf3ff"/>
+    <text x="566" y="306" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#477aeb">连接</text>
+
+    <text x="94" y="352" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="#405a7c">用户名</text>
+    <rect x="94" y="364" width="250" height="36" rx="6" fill="#ffffff" stroke="#c9d8ea"/>
+    <text x="108" y="387" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#405a7c">Administrator</text>
+
+    <text x="94" y="430" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="#405a7c">密码</text>
+    <rect x="94" y="442" width="250" height="36" rx="6" fill="#ffffff" stroke="#c9d8ea"/>
+    <text x="108" y="465" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#405a7c">••••••••••</text>
+    <text x="362" y="465" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#8da0ba">从服务详情页复制</text>
+
+    <circle cx="590" cy="452" r="22" fill="#eaf7ef"/>
+    <path d="m580 452 7 7 14-15" fill="none" stroke="#2a9b62" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <rect x="700" y="188" width="436" height="310" rx="14" fill="#173f75"/>
+    <text x="728" y="226" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="700" letter-spacing="1.4" fill="#9fc2ee">连接检查清单</text>
+    <circle cx="736" cy="270" r="10" fill="#2d588f"/>
+    <text x="736" y="274" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#dbeaff">1</text>
+    <text x="758" y="275" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#e5effb">实例状态为「运行中」</text>
+    <circle cx="736" cy="314" r="10" fill="#2d588f"/>
+    <text x="736" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#dbeaff">2</text>
+    <text x="758" y="319" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#e5effb">已添加 3389 端口映射</text>
+    <circle cx="736" cy="358" r="10" fill="#2d588f"/>
+    <text x="736" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#dbeaff">3</text>
+    <text x="758" y="363" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#e5effb">地址、账号、密码填写正确</text>
+    <circle cx="736" cy="402" r="10" fill="#2d588f"/>
+    <text x="736" y="406" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#dbeaff">4</text>
+    <text x="758" y="407" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#e5effb">本地网络未拦截 41252 端口</text>
+    <rect x="728" y="438" width="380" height="34" rx="7" fill="#204f89"/>
+    <text x="744" y="460" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#b9d1ec">macOS 可使用 Microsoft Remote Desktop 客户端</text>
+  </g>
+
+  <text x="64" y="534" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#7189ab">首次连接出现证书提示属于正常现象，确认地址无误后继续即可。</text>
+</svg>

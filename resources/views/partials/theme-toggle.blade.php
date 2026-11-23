@@ -1,0 +1,1 @@
+<button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="切换为黑夜模式" data-theme-toggle><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 13.1A9 9 0 0 1 10.9 3 9 9 0 1 0 21 13.1Z"/></svg><span>黑夜模式</span></button>

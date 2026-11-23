@@ -1,0 +1,38 @@
+(()=>{
+'use strict';
+const form=document.querySelector('[data-testimonials-editor]');if(!form)return;
+const find=s=>form.querySelector(s),list=find('[data-editor-list]'),template=find('[data-review-template]'),add=find('[data-add-testimonial]'),empty=find('[data-editor-empty]'),status=find('[data-editor-status]'),search=find('[data-review-search]'),visibility=find('[data-review-visibility]'),rating=find('[data-review-rating]'),pageSize=find('[data-review-pagesize]'),draft=find('[data-review-draft]');
+const rows=()=>[...list.querySelectorAll('[data-testimonial-row]')],previews=new Map();
+let nextIndex=Math.max(0,...rows().flatMap(row=>[...row.querySelectorAll('[name]')].map(e=>+(e.name.match(/^items\[(\d+)\]/)?.[1]||0))))+1,page=1,dirty=false;
+const field=(row,name)=>row.querySelector(`[name$="[${name}]"]${name==='enabled'?'[type=checkbox]':''}`);
+function markDirty(){dirty=true;draft.hidden=false;}
+function release(row){const url=previews.get(row);if(url){URL.revokeObjectURL(url);previews.delete(row);}}
+function open(row,value=true){row.querySelector('[data-review-body]').hidden=!value;row.querySelector('[data-review-toggle]').setAttribute('aria-expanded',String(value));}
+function reset(){search.value='';visibility.value='';rating.value='';page=1;}
+function sync(row,index){
+ const name=field(row,'name').value.trim(),content=field(row,'content').value.trim(),enabled=field(row,'enabled').checked;
+ row.querySelector('[data-row-number]').textContent='顺序 '+(index+1);
+ row.querySelector('[data-summary-name]').textContent=name||'未填写昵称';
+ row.querySelector('[data-summary-role]').textContent=field(row,'role').value;
+ row.querySelector('[data-summary-content]').textContent=content||'点击编辑评价内容';
+ row.querySelector('[data-summary-rating]').textContent=field(row,'rating').value+' 星';
+ const state=row.querySelector('[data-summary-enabled]');state.textContent=enabled?'首页展示中':'未展示';state.classList.toggle('is-enabled',enabled);
+ row.querySelector('[data-char-count]').textContent=[...field(row,'content').value].length+' / 500 字';
+ row.querySelector('[data-row-up]').disabled=index===0;row.querySelector('[data-row-down]').disabled=index===rows().length-1;
+ for(const el of row.querySelectorAll('[data-avatar-fallback],[data-summary-fallback]'))el.textContent=[...name][0]||'用';
+}
+function matches(row){const text=[field(row,'name').value,field(row,'role').value,field(row,'content').value].join(' ').toLocaleLowerCase(),enabled=field(row,'enabled').checked;return(!search.value.trim()||text.includes(search.value.trim().toLocaleLowerCase()))&&(!visibility.value||(visibility.value==='enabled')===enabled)&&(!rating.value||field(row,'rating').value===rating.value);}
+function render(){const all=rows();all.forEach(sync);const filtered=all.filter(matches),size=+pageSize.value,pages=Math.max(1,Math.ceil(filtered.length/size));page=Math.min(Math.max(page,1),pages);const visible=new Set(filtered.slice((page-1)*size,page*size));for(const row of all)row.hidden=!visible.has(row);empty.hidden=all.length>0;find('[data-review-no-results]').hidden=all.length===0||filtered.length>0;find('[data-review-count]').textContent=all.length+' / 30 条';find('[data-review-results]').textContent=`共 ${all.length} 条评价 · 匹配 ${filtered.length} 条`;find('[data-review-page]').textContent=`第 ${page} / ${pages} 页`;find('[data-review-pagination]').hidden=filtered.length<=size;find('[data-review-prev]').disabled=page<=1;find('[data-review-next]').disabled=page>=pages;add.disabled=all.length>=30;}
+function reveal(row){reset();const index=rows().indexOf(row);page=Math.floor(index/+pageSize.value)+1;render();open(row);}
+function images(row,url){for(const img of row.querySelectorAll('[data-avatar-image],[data-summary-image]')){if(url)img.src=url;else img.removeAttribute('src');img.hidden=!url;}for(const el of row.querySelectorAll('[data-avatar-fallback],[data-summary-fallback]'))el.hidden=!!url;}
+for(const input of [search,visibility,rating,pageSize])input.addEventListener(input===search?'input':'change',()=>{page=1;render();});
+find('[data-review-reset]').addEventListener('click',()=>{reset();render();});
+find('[data-review-prev]').addEventListener('click',()=>{page--;render();});find('[data-review-next]').addEventListener('click',()=>{page++;render();});
+add.addEventListener('click',()=>{if(rows().length>=30)return;const content=template.content.cloneNode(true),key=String(nextIndex++);for(const el of content.querySelectorAll('*'))for(const attribute of ['name','id','for','aria-controls'])if(el.hasAttribute(attribute))el.setAttribute(attribute,el.getAttribute(attribute).replaceAll('__INDEX__',key));list.append(content);markDirty();const row=list.lastElementChild;reveal(row);field(row,'name').focus();status.textContent='已添加评价，填写后请保存。';});
+list.addEventListener('input',e=>{const row=e.target.closest('[data-testimonial-row]');if(!row||e.target.matches('[type=file]'))return;markDirty();sync(row,rows().indexOf(row));});
+list.addEventListener('change',e=>{const row=e.target.closest('[data-testimonial-row]');if(!row)return;markDirty();if(!e.target.matches('[data-avatar-file]')){sync(row,rows().indexOf(row));return;}const input=e.target,file=input.files[0],error=row.querySelector('[data-avatar-error]'),filename=row.querySelector('[data-avatar-filename]');error.textContent='';if(!file){filename.textContent='未选择新图片';return;}if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>2*1024*1024){input.value='';filename.textContent='未选择新图片';release(row);images(row,row.querySelector('[data-avatar-remove]').value==='1'?'':row.dataset.avatarOriginal||'');error.textContent='请选择不超过 2 MB 的 JPG、PNG 或 WebP 图片。';return;}release(row);const url=URL.createObjectURL(file);previews.set(row,url);images(row,url);filename.textContent=file.name;row.querySelector('[data-avatar-remove]').value='0';status.textContent='头像预览已更新，保存后在首页生效。';});
+list.addEventListener('click',e=>{const control=e.target.closest('button'),row=control?.closest('[data-testimonial-row]');if(!row)return;if(control.matches('[data-review-toggle]')){open(row,row.querySelector('[data-review-body]').hidden);return;}if(control.matches('[data-review-done]')){open(row,false);row.querySelector('[data-review-toggle]').focus();return;}if(control.matches('[data-remove-avatar]')){release(row);row.querySelector('[data-avatar-file]').value='';row.querySelector('[data-avatar-remove]').value='1';images(row,'');row.querySelector('[data-avatar-filename]').textContent='未选择新图片';row.querySelector('[data-avatar-error]').textContent='';status.textContent='头像已移除，保存后生效。';}if(control.matches('[data-row-up]')&&row.previousElementSibling){list.insertBefore(row,row.previousElementSibling);status.textContent='已上移，请保存展示顺序。';}if(control.matches('[data-row-down]')&&row.nextElementSibling){list.insertBefore(row.nextElementSibling,row);status.textContent='已下移，请保存展示顺序。';}if(control.matches('[data-row-remove]')){release(row);row.remove();status.textContent='已移除该条评价，保存后生效。';}markDirty();render();});
+form.addEventListener('submit',e=>{const invalid=form.querySelector('input:invalid,textarea:invalid,select:invalid');if(invalid){e.preventDefault();const row=invalid.closest('[data-testimonial-row]');if(row)reveal(row);invalid.focus();invalid.reportValidity();status.textContent='请先补全标记的必填项，再保存全部评价。';return;}dirty=false;});
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});window.addEventListener('pagehide',()=>{for(const row of previews.keys())release(row);});
+render();if(document.querySelector('[role=alert]')){for(const row of rows())if(row.querySelector(':invalid')){reveal(row);break;}}
+})();

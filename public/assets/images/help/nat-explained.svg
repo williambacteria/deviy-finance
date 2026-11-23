@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">独立 IP 与 NAT 云主机</title>
+  <desc id="desc">独立 IP 直接暴露公网地址，NAT 云主机通过共享公网 IP 和端口映射访问。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#23436a" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="560" rx="24" fill="url(#bg)"/>
+  <text x="64" y="62" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" letter-spacing="2.2" fill="#477aeb">NAT CLOUD BASICS</text>
+  <text x="64" y="112" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="32" font-weight="700" fill="#17345b">独立 IP 与 NAT 云主机，怎么选？</text>
+  <text x="64" y="145" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#7085a3">两者都能运行完整系统，区别主要在于公网地址的使用方式。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="188" width="510" height="286" rx="16" fill="#ffffff" stroke="#e1eaf7"/>
+    <rect x="88" y="214" width="120" height="28" rx="14" fill="#edf3ff"/>
+    <text x="148" y="233" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="700" fill="#477aeb">独立 IP</text>
+    <text x="88" y="284" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="700" fill="#17345b">直接绑定公网 IPv4</text>
+    <text x="88" y="314" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">适合需要独立地址、直接解析域名</text>
+    <text x="88" y="336" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">或对端口有完整控制权的业务。</text>
+    <rect x="88" y="368" width="456" height="46" rx="9" fill="#f5f9ff"/>
+    <text x="104" y="397" font-family="Consolas, monospace" font-size="12" fill="#477aeb">203.0.113.18:22  →  instance:22</text>
+    <text x="88" y="446" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#8da0ba">公网地址独享 · 无需端口转发即可监听端口</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="626" y="188" width="510" height="286" rx="16" fill="#173f75"/>
+    <rect x="650" y="214" width="120" height="28" rx="14" fill="#2d588f"/>
+    <text x="710" y="233" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="700" fill="#cfe0ff">NAT 云主机</text>
+    <text x="650" y="284" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="700" fill="#ffffff">共享公网 IP + 端口映射</text>
+    <text x="650" y="314" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#b9d1ec">多个实例共享出口地址，通过不同端口</text>
+    <text x="650" y="336" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#b9d1ec">对外提供服务，成本更低。</text>
+    <rect x="650" y="368" width="456" height="46" rx="9" fill="#204f89"/>
+    <text x="666" y="397" font-family="Consolas, monospace" font-size="12" fill="#dbeaff">p7.deviy.cn:41252  →  192.168.122.11:3389</text>
+    <text x="650" y="446" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#9fc2ee">公网 IP 共享 · 通过外部端口区分实例</text>
+  </g>
+
+  <rect x="64" y="502" width="1072" height="34" rx="8" fill="#ffffff" opacity=".7"/>
+  <text x="88" y="524" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#647d9e">购买 NAT 云主机前，请确认所需外部端口在主控允许范围内；开通后在控制台「端口映射」中按需添加。</text>
+</svg>

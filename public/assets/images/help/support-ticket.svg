@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">提交工单</title>
+  <desc id="desc">提交工单需要实例编号、问题描述、优先级和必要截图。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fbff"/><stop offset="1" stop-color="#eef4ff"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#23436a" flood-opacity=".08"/></filter>
+  </defs>
+  <rect width="1200" height="500" rx="24" fill="url(#bg)"/>
+  <text x="64" y="58" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" letter-spacing="2.2" fill="#477aeb">SUPPORT TICKET</text>
+  <text x="64" y="106" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="31" font-weight="700" fill="#17345b">把问题说清楚，支持会更快</text>
+  <text x="64" y="137" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="14" fill="#7085a3">提交工单时附上实例编号、发生时间、操作步骤和报错截图，能显著减少来回确认。</text>
+
+  <g filter="url(#s)">
+    <rect x="64" y="180" width="520" height="248" rx="15" fill="#fff" stroke="#e1eaf7"/>
+    <text x="88" y="216" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="700" fill="#8094b1">工单内容示例</text>
+    <rect x="88" y="236" width="472" height="42" rx="7" fill="#f8fafd" stroke="#e2eaf5"/>
+    <text x="102" y="262" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#405a7c">实例：SVC-202611-XXXXXX · 端口映射不生效</text>
+    <rect x="88" y="290" width="472" height="80" rx="7" fill="#f8fafd" stroke="#e2eaf5"/>
+    <text x="102" y="314" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#405a7c">现象：外部端口 41252 无法连接</text>
+    <text x="102" y="336" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#405a7c">已排查：实例运行中，内部 3389 已监听</text>
+    <text x="102" y="358" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#405a7c">时间：2026-11-23 16:30 左右开始</text>
+    <rect x="88" y="386" width="150" height="28" rx="14" fill="#fff5e6"/>
+    <text x="163" y="405" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="700" fill="#a66a16">优先级：高</text>
+  </g>
+
+  <g>
+    <rect x="624" y="180" width="512" height="248" rx="15" fill="#173f75"/>
+    <text x="650" y="216" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="700" fill="#9fc2ee">处理流程</text>
+    <circle cx="660" cy="254" r="11" fill="#2d588f"/><text x="660" y="258" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#dbeaff">1</text>
+    <text x="684" y="259" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#e5effb">提交工单并选择业务类型</text>
+    <circle cx="660" cy="296" r="11" fill="#2d588f"/><text x="660" y="300" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#dbeaff">2</text>
+    <text x="684" y="301" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#e5effb">支持团队确认问题与影响范围</text>
+    <circle cx="660" cy="338" r="11" fill="#2d588f"/><text x="660" y="342" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#dbeaff">3</text>
+    <text x="684" y="343" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#e5effb">排查、处理并在工单中同步进度</text>
+    <circle cx="660" cy="380" r="11" fill="#2f7d57"/><text x="660" y="384" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#d9f9e7">4</text>
+    <text x="684" y="385" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12.5" fill="#e5effb">确认恢复后关闭工单</text>
+  </g>
+
+  <rect x="64" y="448" width="1072" height="30" rx="7" fill="#fff" opacity=".7"/>
+  <text x="88" y="468" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#647d9e">请勿在工单中发送完整密码、私钥或身份证照片；支持人员不会索要这些信息。</text>
+</svg>

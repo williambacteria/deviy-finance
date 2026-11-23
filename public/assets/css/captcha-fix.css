@@ -1,0 +1,24 @@
+/* zxf/captcha presentation fixes */
+.captcha_div {
+    overflow: hidden !important;
+}
+
+.captcha_slide {
+    overflow: hidden !important;
+}
+
+.captcha_slide_block {
+    box-sizing: border-box !important;
+}
+
+.captcha_copyright {
+    display: none !important;
+}
+
+.captcha_tools {
+    justify-content: flex-end !important;
+}
+
+/* A focused, touch-friendly click challenge; no draggable handle remains. */
+.captcha-click-mode .captcha_slide_block{display:none!important}.captcha-click-mode .captcha_canvas_bg{cursor:crosshair;touch-action:manipulation}.captcha-click-mode .captcha_slide_text{font-size:15px!important;line-height:1.9!important;color:var(--theme-text)!important;white-space:normal!important;text-align:left!important;padding:7px 4px!important;font-weight:500!important}.captcha-click-progress{font:13px/1.8 "Noto Sans SC",sans-serif;color:var(--theme-muted);padding:7px 14px 10px;text-align:center;min-height:38px}.captcha-click-mode .captcha_title{font-size:16px!important;color:var(--theme-text)!important}.captcha-click-mode .captcha_tools{padding:9px 12px!important;border-top:1px solid var(--theme-border)}.captcha-click-mode .captcha_close,.captcha-click-mode .captcha_refresh{min-height:32px;min-width:32px}.captcha-click-mode .captcha_div_body{padding:12px!important}.captcha-click-mode .captcha_tools{gap:12px}.captcha-click-mode{border:1px solid var(--theme-border)!important;background:var(--theme-surface)!important}.xf-captcha{font-size:14px!important}.captcha-click-mode[data-theme=dark]{background:#172337!important}.captcha-click-mode[data-theme=light]{background:#fff!important}
+@media(max-width:560px){.captcha-click-mode{max-width:calc(100vw - 28px)!important}.captcha-click-mode .captcha_slide_text{font-size:15px!important}.captcha-click-progress{font-size:13px;padding-inline:9px}}

@@ -1,0 +1,16 @@
+[Unit]
+Description=Deviy Finance Queue
+After=network.target
+
+[Service]
+Type=simple
+User=www
+Group=www
+WorkingDirectory=/www/wwwroot/demo.deviy.cn
+ExecStart=/www/server/php/83/bin/php artisan queue:work --sleep=3 --tries=3 --timeout=120
+Restart=always
+RestartSec=5
+TimeoutStopSec=150
+
+[Install]
+WantedBy=multi-user.target

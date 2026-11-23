@@ -1,0 +1,57 @@
+# 运行配置与密钥
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+auth.json
+.npmrc
+.mcp.json
+
+# 依赖与构建
+/vendor/
+/node_modules/
+/public/build/
+/public/hot
+/public/storage
+
+# 运行状态、客户数据与备份
+/storage/**
+!/storage/**/
+!/storage/**/.gitignore
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+*.dump
+*.bak
+*.bak.*
+*.tmp
+*.private.json
+*.tar
+*.tar.gz
+*.zip
+*.7z
+/backups/
+/exports/
+/public/preview/
+/public/assets/*concepts*/
+/vnc-qa.php
+/qa*.php
+/test*.php
+
+# 本地工具
+/.agents/
+/.claude/
+/.codex/
+/.cursor/
+/.idea/
+/.vscode/
+.phpunit.result.cache
+/.phpunit.cache/
+.DS_Store
+Thumbs.db

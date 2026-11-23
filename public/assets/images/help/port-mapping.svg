@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">NAT 端口映射原理</title>
+  <desc id="desc">公网地址 p7.deviy.cn:41252 转发到内网 192.168.122.11:3389。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7faff"/>
+      <stop offset="1" stop-color="#edf4ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#23436a" flood-opacity=".08"/>
+    </filter>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 9 4.5 0 9Z" fill="#6f96e8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="560" rx="24" fill="url(#bg)"/>
+  <text x="64" y="62" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" letter-spacing="2.2" fill="#477aeb">NAT PORT FORWARDING</text>
+  <text x="64" y="112" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="32" font-weight="700" fill="#17345b">一条映射，把公网流量送到内网实例</text>
+  <text x="64" y="145" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" fill="#7085a3">外部设备访问公网 IP + 端口，NAT 网关按规则转发到实例内网 IP + 端口。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="198" width="270" height="206" rx="16" fill="#ffffff" stroke="#e1eaf7"/>
+    <rect x="88" y="222" width="52" height="52" rx="14" fill="#edf3ff"/>
+    <rect x="100" y="236" width="28" height="20" rx="3" fill="none" stroke="#477aeb" stroke-width="2"/>
+    <path d="M100 260h28" stroke="#477aeb" stroke-width="2"/>
+    <text x="88" y="310" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#17345b">外部访问</text>
+    <text x="88" y="340" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">例如在本地电脑使用</text>
+    <text x="88" y="362" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">远程桌面或 SSH 客户端。</text>
+    <rect x="88" y="378" width="196" height="26" rx="7" fill="#f4f8ff"/>
+    <text x="100" y="396" font-family="Consolas, monospace" font-size="11" fill="#477aeb">p7.deviy.cn:41252</text>
+  </g>
+
+  <path d="M344 300h96" stroke="#6f96e8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="392" y="286" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#7189ab">TCP / UDP</text>
+
+  <g filter="url(#shadow)">
+    <rect x="450" y="186" width="300" height="230" rx="18" fill="#173f75"/>
+    <text x="478" y="224" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="700" letter-spacing="1.4" fill="#9fc2ee">NAT GATEWAY</text>
+    <text x="478" y="260" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="700" fill="#ffffff">公网端口转发</text>
+    <rect x="478" y="286" width="244" height="52" rx="9" fill="#204f89"/>
+    <text x="494" y="308" font-family="Consolas, monospace" font-size="12" fill="#dbeaff">external :41252</text>
+    <text x="494" y="327" font-family="Consolas, monospace" font-size="12" fill="#9fc2ee">internal :3389</text>
+    <path d="M520 354h160" stroke="#6f96e8" stroke-width="2" stroke-dasharray="5 5"/>
+    <circle cx="520" cy="354" r="4" fill="#6f96e8"/>
+    <circle cx="680" cy="354" r="4" fill="#4ade80"/>
+    <text x="478" y="392" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#b9d1ec">仅开放需要的端口，避免暴露全部服务</text>
+  </g>
+
+  <path d="M760 300h96" stroke="#6f96e8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="808" y="286" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#7189ab">转发</text>
+
+  <g filter="url(#shadow)">
+    <rect x="866" y="198" width="270" height="206" rx="16" fill="#ffffff" stroke="#e1eaf7"/>
+    <rect x="890" y="222" width="52" height="52" rx="14" fill="#edf3ff"/>
+    <rect x="902" y="235" width="28" height="20" rx="3" fill="none" stroke="#477aeb" stroke-width="2"/>
+    <path d="M908 241h16M908 247h10" stroke="#477aeb" stroke-width="2"/>
+    <text x="890" y="310" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#17345b">内网实例</text>
+    <text x="890" y="340" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">实例只需要监听内网端口，</text>
+    <text x="890" y="362" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" fill="#6e829f">无需单独配置公网地址。</text>
+    <rect x="890" y="378" width="212" height="26" rx="7" fill="#f4f8ff"/>
+    <text x="902" y="396" font-family="Consolas, monospace" font-size="11" fill="#477aeb">192.168.122.11:3389</text>
+  </g>
+
+  <rect x="64" y="450" width="1072" height="66" rx="12" fill="#ffffff" opacity=".72"/>
+  <text x="88" y="478" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="#315df4">填写要点</text>
+  <text x="88" y="500" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#647d9e">外部端口：公网访问端口，需在主控允许范围内；内部端口：实例实际监听端口；协议按业务选择 TCP、UDP 或 TCP + UDP。</text>
+</svg>
