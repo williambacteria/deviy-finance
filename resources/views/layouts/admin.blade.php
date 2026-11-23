@@ -8,7 +8,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', '运营后台') · Deviy Cloud</title>
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" href="{{ asset('favicon.ico') }}?v=20261124-brand1">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}?v={{ filemtime(public_path('assets/css/app.css')) }}">
     @stack('styles')
     @stack('head')
@@ -25,7 +25,7 @@
         <aside class="sidebar" id="console-sidebar">
             <button class="console-mobile-nav-close" type="button" aria-label="关闭后台菜单" data-console-nav-close>×</button>
             <a class="brand" href="{{ route('admin.dashboard') }}">
-                <img class="brand-logo" src="{{ asset('assets/images/devicloud-logo.png') }}" alt="Devicloud 德威云计算">
+                <img class="brand-logo" src="{{ asset('assets/images/devicloud-logo.png') }}?v=20261124-brand1" alt="德威云计算 · DEVIY CLOUD">
             </a>
             <div class="azure-workspace azure-workspace--compact azure-workspace--admin"><span class="azure-workspace-icon"><x-icon name="building" :size="16" /></span><div><b>运营后台</b><small>平台管理</small></div></div>
 

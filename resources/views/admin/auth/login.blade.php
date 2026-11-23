@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('assets/fonts/noto-sc/noto-sc.css') }}?v=20261117">
 
     <title>管理员登录 · Deviy Cloud</title>
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" href="{{ asset('favicon.ico') }}?v=20261124-brand1">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}?v={{ filemtime(public_path('assets/css/app.css')) }}">
     <link rel="stylesheet" href="{{ asset('assets/css/azure.css') }}?v={{ filemtime(public_path('assets/css/azure.css')) }}">
     <link rel="stylesheet" href="{{ asset('assets/css/theme.css') }}?v={{ filemtime(public_path('assets/css/theme.css')) }}">
@@ -20,7 +20,7 @@
     <div class="theme-fixed">@include('partials.theme-toggle')</div>
     <aside class="auth-side">
         <a class="brand" href="{{ route('home') }}">
-            <img class="brand-logo" src="{{ asset('assets/images/devicloud-logo.png') }}" alt="Devicloud 德威云计算">
+            <img class="brand-logo" src="{{ asset('assets/images/devicloud-logo.png') }}?v=20261124-brand1" alt="德威云计算 · DEVIY CLOUD">
         </a>
         <div class="auth-copy">
             <h1>运营后台，<br><span>只保留必要的事</span>。</h1>
@@ -37,7 +37,7 @@
     <main class="auth-main">
         <div class="auth-card">
             <a class="brand" href="{{ route('home') }}">
-                <img class="brand-logo" src="{{ asset('assets/images/devicloud-logo.png') }}" alt="Devicloud 德威云计算">
+                <img class="brand-logo" src="{{ asset('assets/images/devicloud-logo.png') }}?v=20261124-brand1" alt="德威云计算 · DEVIY CLOUD">
             </a>
 
             @include('partials.flash')

@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', '德威云计算') · {{ $siteSettings['site_slogan'] ?? '做最专业的云服务商' }}</title>
     <meta name="description" content="@yield('description', '德威云计算，专注为游戏云、企业云及中小型企业提供稳定、安全的计算与基础设施服务。')">
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" href="{{ asset('favicon.ico') }}?v=20261124-brand1">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}?v={{ filemtime(public_path('assets/css/app.css')) }}">
     <link rel="stylesheet" href="{{ asset('assets/css/deviy-site.css') }}?v={{ filemtime(public_path('assets/css/deviy-site.css')) }}">
     @stack('head')
@@ -22,7 +22,7 @@
     <header class="dv-header">
         <div class="dv-container dv-header-inner">
             <a class="dv-brand" href="{{ route('home') }}" aria-label="德威云计算">
-                <img src="{{ asset('assets/images/devicloud-logo.png') }}" alt="Devicloud 德威云计算">
+                <img src="{{ asset('assets/images/devicloud-logo.png') }}?v=20261124-brand1" alt="德威云计算 · DEVIY CLOUD">
             </a>
 
             <nav class="dv-nav" id="dv-nav">
@@ -66,7 +66,7 @@
         <div class="dv-container">
             <div class="dv-footer-grid">
                 <div class="dv-footer-brand">
-                    <img class="dv-footer-logo" src="{{ asset('assets/images/devicloud-logo.png') }}" alt="Devicloud 德威云计算">
+                    <img class="dv-footer-logo" src="{{ asset('assets/images/devicloud-logo.png') }}?v=20261124-brand1" alt="德威云计算 · DEVIY CLOUD">
                     <p>德威云计算（Devicloud）成立于 2014 年，专注为游戏云、政务云及中小企业提供稳定、透明、可长期依赖的云计算基础设施。我们整合 AMD、Intel 多平台算力，提供云服务器、NAT 云主机、裸金属服务器与游戏云等产品，覆盖香港、苏州、东京、美国等多个区域；通过中文控制台将选购、账单、监控、端口映射与工单支持连成一体，并以 7×12 小时人工服务回应每一次需求。把复杂留给云，把从容留给你——从一个想法，到云上万千可能。</p>
                 </div>
                 <div class="dv-footer-col">
